@@ -1,2 +1,0 @@
-# LaPetiteCuisine
-Cooking Web Project

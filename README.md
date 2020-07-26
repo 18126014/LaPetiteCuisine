@@ -1,10 +1,10 @@
-# PROJECT: Le Petite Cuisine
+# PROJECT: La Petite Cuisine
 
 Daily food page published by the founders of LePetiteCuisine. Most recipes use whole foods and are double-tested in real home kitchens.
 
 ## About us
 
-Le Petite Cuisine from 18VP-FIT-HCMUS.
+La Petite Cuisine from 18VP-FIT-HCMUS.
 
 * **LINH** Dang Diem
 * **PHONG** Pham Vo Duc

@@ -1,6 +1,6 @@
 # PROJECT: La Petite Cuisine
 
-Daily food page published by the founders of LePetiteCuisine. Most recipes use whole foods and are double-tested in real home kitchens.
+Daily food page published by the founders of LaPetiteCuisine. Most recipes use whole foods and are double-tested in real home kitchens.
 
 ## About us
 

@@ -1,0 +1,76 @@
+/*
+==================================================================
+    General
+==================================================================
+*/
+
+/* body get a min-height and flex  to push footer to p */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'ProximaNova Light', Roboto, sans-serif;
+    color: var(--grey);
+}
+
+/* headings restyled form default */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'ProximaNova Regular', Roboto, sans-serif;
+    color: var(--black);
+}
+
+h1, h2, .uk-h1, .uk-h2 {
+    font-family: 'ProximaNova Light', Roboto, sans-serif;
+    text-decoration-color: var(--black) !important;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* flex: 1 used to make main fill any unused remaining space  */
+main {
+    flex: 1;
+    margin-top: 50px;
+}
+
+/*
+==================================================================
+    Recipe Page
+==================================================================
+*/
+
+.cuisine-badge {
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: var(--white);
+    background-color: var(--darkblue);
+}
+
+.tags {
+    padding: 0 5px;
+}
+
+.uk-padding-bottom {
+    padding-bottom: 40px;
+}
+
+.uk-comment, .uk-placeholder {
+    background-color: var(--darkwhite) !important;
+    border-radius: 5px;
+}
+
+.uk-comment-title {
+    text-transform: capitalize;
+}
+
+p.comment {
+    padding-left: 110px;
+    padding-bottom: 10px;
+}
+

@@ -1,0 +1,190 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricipe html | La Petite Cuisine</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/uikit.min.css">
+    <link rel="stylesheet" href="css/recipe.css">
+</head>
+<body>
+    <section id="recipe" class="uk-container">   
+        <!-- RECIPE TITLE -->
+        <h1 class="uk-text-bold uk-text-center">Lamb Kleftiko</h1>
+        <div class="uk-margin-medium" uk-grid>
+            
+            <!-- RECIPE IMAGE / AUTHOR -->
+            <div class="uk-text-center uk-inline uk-width-1-3@m">
+                <img height="400" width="375" src="img/kleftiko.jpg" alt="">
+                <p><span class="card-lead-text">Author: </span>Good Food</p>
+            </div>
+    
+            <!-- DETAILS -->
+            <div class="uk-padding-bottom uk-inline uk-width-2-3@m">
+                <p class="uk-text-lead">Seal a leg of lamb in a parcel then roast it long and slow with garlic, lemon and herbs, and potatoes to soak up the delicious juices</p>
+                <span class="cuisine-badge">Greek</span>
+    
+                <!-- NUTRITION TABLE -->
+                <div class="uk-margin-medium uk-overflow-auto">
+                    <table class="uk-table uk-table-divider uk-table-striped uk-table-small uk-table-justify">
+                        <caption class="uk-text-bold">Nutrition</caption>
+                        <thead>
+                            <tr>                         
+                                <th class="uk-text-bold">kcal</th>
+                                <th class="uk-text-bold">fat</th>                            
+                                <th class="uk-text-bold">saturates</th>                            
+                                <th class="uk-text-bold">carbs</th>                            
+                                <th class="uk-text-bold">sugars</th>                            
+                                <th class="uk-text-bold">fibre</th>                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>                            
+                                <th class="uk-text-emphasis">729</th>                            
+                                <th class="uk-text-emphasis">41g</th>                            
+                                <th class="uk-text-emphasis">16g</th>                            
+                                <th class="uk-text-emphasis">33g</th>                            
+                                <th class="uk-text-emphasis">6g</th>                            
+                                <th class="uk-text-emphasis">4g</th>                            
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <!-- COOK / PREP TIME -->
+                <p class="slider-icons">
+                    <span class="uk-text-nowrap"><i uk-icon="bell"></i> Cook: 5 hrs, 20 mins </span>
+                    <span class="uk-text-nowrap"><i uk-icon="bolt"></i> Prep: 10 mins </span>
+                </p>                
+
+                <!-- TAGS -->
+                <p>
+                    <i uk-icon="tag"></i>
+                        <a class="tags uk-text-nowrap" href="/categories/cuisine/greek"><i uk-icon="hashtag"></i>greek</a>
+                        <a class="tags uk-text-nowrap" href="/categories/mood/hearty"><i uk-icon="hashtag"></i>hearty</a>
+                        <a class="tags uk-text-nowrap" href="/categories/diet/gluten-free"><i uk-icon="hashtag"></i>gluten-free</a>
+                        <a class="tags uk-text-nowrap" href="/categories/skill/medium"><i uk-icon="hashtag"></i>medium</a>        
+                </p>
+
+                <!--ICONNAV -->
+                <div class="uk-margin-top uk-position-bottom-right">
+                    <ul class="uk-iconnav">         
+                        <li class="uk-inline" uk-tooltip="title: Edit; pos: top-right"> 
+                            <a class="userNotLoggedIn" uk-icon="file-edit"></a></li>
+                        <li class="uk-inline" uk-tooltip="title: Like; pos: top-right">
+                            <i class="favourites"  data-values="5cafaa1acf37086ce3ad43a0,like,false" uk-icon="heart"> 76 </i></li>
+                        <li class="uk-inline" uk-tooltip="title: Dislike; pos: top-right">
+                            <i class="favourites"  data-values="5cafaa1acf37086ce3ad43a0,dislike,false" uk-icon="trash"> 12 </i></li>
+                        <li  uk-tooltip="title: Comments; pos: top-right"><i uk-icon="comments">  1 </i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- LISTS -->
+        <div id="recipe-lists" class="uk-text-left uk-margin-large" uk-grid>
+        
+            <!--INGREDIENTS -->
+            <div class="uk-inline uk-width-1-3@l">
+                <h3>Ingredients</h3>
+                <ul class="uk-list uk-list-bullet">                
+                    <li> 6 garlic cloves</li>                
+                    <li> 3 tbsp roughly chopped oregano</li>                
+                    <li> 1 tbsp roughly chopped rosemary</li>                
+                    <li> zest 1 lemon and juice of 2</li>                
+                    <li> ½ tsp ground cinnamon</li>                
+                    <li> 3 tbsp olive oil</li>                
+                    <li> 2kg leg of lamb</li>                
+                    <li> 1kg Desiree potato, halved or quartered</li>                
+                    <li> 5 bay leaves</li>                
+                    <li> 250g Greek yogurt</li>                
+                    <li> juice ½ lemon</li>                
+                    <li> 1 tbsp olive oil</li>                
+                    <li> handful mint, shredded</li>                
+                    <li> 1½ tsp red wine vinegar</li>                
+                    <li> 1½ tbsp extra-virgin olive oil</li>                
+                    <li> 100g baby spinach</li>                
+                    <li> small bunch parsley, roughly chopped</li>                
+                    <li> ½ red onion, finely sliced</li>                
+                    <li> 175g cherry tomato, halved</li>                
+                    <li> ½ cucumber, halved lengthways, deseeded and sliced</li>
+                    <li> 75g black Kalamata olive, stoned and quartered</li>                
+                </ul>
+            </div>
+        
+            <!-- METHODS -->
+            <div class="uk-inline uk-width-2-3@l">
+                <h3>Preparation</h3>
+                <p>Serves 6</p>
+                <ol class="uk-list uk-list-divider">                
+                    <li> Crush together the garlic cloves and 1 tsp salt using a pestle and mortar. Add the herbs, lemon zest, cinnamon, some black pepper, crush a little more, then stir through 2 tbsp of the olive oil.</li>                
+                    <li> Using a sharp knife, create lots of holes all over the lamb, and rub in the paste, pushing it deep into the holes. Transfer the lamb to a large food bag, pour in the lemon juice and marinate overnight.</li>                
+                    <li> The next day, take the lamb out of the fridge 1 hr before you want to cook it. Heat oven to 160C/140C fan/gas 3.</li>                
+                    <li> Lay 2 long pieces of baking parchment on top of 2 long pieces of foil – one widthways, the other lengthways to form a cross. Pop the potatoes in the centre of the parchment and toss with the remaining oil and some seasoning. Bring up the sides of the foil, then pour the marinade from the lamb over the potatoes and throw in the bay leaves. </li>                
+                    <li> Set the lamb on top of the potatoes and scrunch the foil together tightly to completely enclose the lamb. Lift into a roasting tin and roast in the oven for 4½ hrs until very tender.</li>                
+                    <li> Remove tin from the oven and increase the temperature to 220C/200C fan/gas 7. Unwrap the parcel and scrunch the foil and parchment under the rim of the tin, baste the lamb with the juices and return to the oven for a further 20 mins until browned. Remove the lamb from the tin, wrap in foil and rest. </li>                
+                    <li> Turn the potatoes over and return to the oven for 30 mins, then season with salt. While the potatoes are cooking, stir together all the ingredients for the yogurt.</li>                
+                    <li> Combine the red wine vinegar, oil and some seasoning to make a dressing for the salad. Toss together the remaining salad ingredients, adding the dressing when you’re ready to eat. Serve the lamb with the potatoes and meaty juices, with the salad and yogurt on the side.</li>                
+                </ol>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- COMMENTS -->
+    <section id="comments" class="uk-container uk-margin-large">
+        <h2>Comments</h2>
+        <p class="uk-margin-remove-bottom">Have your say about this recipe!</p>
+
+        <!-- USER COMMENTS -->
+        <div id="user-comments" class="uk-margin-medium">
+
+            <!-- LOOP OVER COMMENTS -->
+        
+    <!-- COMMENT  -->
+    <article class="uk-comment uk-padding-small uk-margin-medium">
+        <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+            <!-- PROFILE PICTURE -->
+            <div class="uk-width-auto">
+                <img class="uk-comment-avatar" src="img/profile_picture.png" width="80" height="80" alt="profile picture">
+            </div>
+            <!-- COMMENT DETAILS -->
+            <div class="uk-width-expand">
+                <h4 class="uk-comment-title uk-margin-remove">martin123</h4>
+                <div class="uk-comment-meta">
+                    Post: <a href="/recipe/Lamb_kleftiko">Lamb Kleftiko</a>
+                </div>
+                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                    <li>Time: 8/15/2020, 10:56:26 PM</li>
+                </ul>
+            </div>
+        </header>
+        <!-- COMMENT TEXT -->
+        <div class="uk-comment-body">
+            <p class="comment">Hello world!</p>
+        </div>
+    </article>
+
+        <!-- FORM / ALERT -->
+        <h3>Leave a comment ...</h3>
+    
+        <!-- REQUIRE SIGN IN TO POST A COMMENT -->
+        <div class="uk-alert-primary" uk-alert>
+            <p>You must be logged in to comment. <a class="uk-align-right@s uk-margin-remove-bottom" href="signin.." class="sign-link"> Sign In </a></p>
+        </div>
+    
+        <!-- COMMENT INPUT FORM -->
+        <form id="comments-form" method="" action="" class="uk-text-right">
+            <label class="uk-form-label" for="form-reply-comment">Reply <i uk-icon="reply"></i></label>
+            <input class="uk-input" id="form-reply-comment" type="text" placeholder="Comment here ..." autocomplete="off" required>
+            <input type="hidden" id="hidden-input" value="{{ current_user.user['username'] }}">
+            <input class="uk-button-primary uk-margin-small uk-button" type="submit" value="Send"></input>
+        </form>
+    
+        <!-- GIVE JAVASCRIPT SOME RECIPE DETAILS -->
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+        <script scr="js/script.js"></script>
+    </section>    
+</body>
+</html>

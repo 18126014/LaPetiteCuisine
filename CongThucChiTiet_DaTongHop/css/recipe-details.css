@@ -1,0 +1,31 @@
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width:740;
+    max-height:510px;
+    width: auto;
+    height: auto;
+    margin-top: 50px;
+  }
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #F7F4EE !important;
+    border: 0px !important;
+    color: #FC4544 !important;
+    margin: 30px 0px;
+}
+
+.date_post{
+  font-weight: lighter;
+  font-size: small;
+}
+
+.HuongDanThucHien{
+  width: 800px;
+}
+
+.nguyenLieu{
+  width: 600px;
+}
+

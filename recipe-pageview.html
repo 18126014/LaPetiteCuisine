@@ -10,34 +10,67 @@
 </head>
 <body>
     <!-- nav bar trang chủ -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    <header>
+        <section class="info-menu">
+            <ul>
+                <li class="info-menu-left">
+                    <ul>
+                        <li><span class="icon-info"><i class="far fa-envelope"></i></span> <a href="mailto:lapetitecuisine@gmail.com">lapetitecuisine@gmail.com</a></li>
+                        <li><span>|</span></li>
+                        <li><span class="icon-info"><i class="fas fa-phone"></i></span><a href="tel:0933111425">(+84) 93-311-1425</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                    </div>
+                
+                <li class="info-menu-right">
+                    <ul social-menu>
+                        <li><a href="#" ><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="#" ><i class="fab fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
+        </section>
+        
+        <section class="main-info">
+            <ul>
+                <li class="logo">
+                    <img src="img/favicon.png" width="100px"><br><span class="brand"></span>LA PETITE CUISINE
+                </li>
+                <li class="bar-search">        
+                    <form action="">
+                        <input id="search-barre" type="search" placeholder="Chercher ici...">
+                        <select id="method-search">
+                            <option value="nom">Par Nom</option>
+                            <option value="saab">Par Ingrédients</option>
+                        </select>
+                    </form>
+                </li>
+            </ul>
+        </section>
+
+        <section class="main-menu">
+            <div class="container">
+                <menu>
+                    <ul class="parent-menu">
+                        <li>
+                            <a href=""><i class="fas fa-home"></i> ACCUEIL  <span class="line-menu"></span></a>
+                        </li>
+                        <li>
+                            <a href="">À PROPOS DE NOUS  <span class="line-menu"></span></a>
+                        </li>
+                        <li><a href="">OCCASION <i class="fas fa-sort-down"></i><span class="line-menu"></span></a>
+                            <ul class="sub-child-menu">
+                                <li><a href="#">Halloween</a></li>
+                                <li><a href="#">Noel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </menu>
+            </div>
+        </section>
+
+    </header>
+    
     <!-- body trang chi tiet , minh code phan nay  -->
     <div class="container">
         <img src="img/hinhmonan.jpg" class="img-fluid" alt="Responsive image" align = "center">

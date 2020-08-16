@@ -1,0 +1,544 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+a:hover {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+header {
+    width: 100%;
+    height: 600px;
+    background-color: black;
+}
+
+header ul.social-info {
+    height: 30px;
+    background-color: #F7F7F7;
+    display: flex;
+}
+
+header ul.social-info li {
+    margin-left: 40px;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+header ul.social-info li a {
+    color: black;
+}
+
+section.logo-container {
+    height: 520px;
+    text-align: center;
+    /* background: url('../images/logo-bg.jpg') ; */
+    background-color: #230903;
+    background-image: linear-gradient(160deg, #230903 10%, #d3b88c 164%);
+    padding: 100px 0px;
+}
+
+section.logo-container h1 {
+    font-family: 'Bangers', cursive, sans-serif;
+    font-size: 60px;
+    color: whitesmoke;
+    margin: 25px auto 12px;
+    text-shadow: 5px 4px black;
+    letter-spacing: 6px;
+}
+
+section.logo-container h2 {
+    font-family: 'Pacifico', cursive, sans-serif;
+    text-transform: capitalize;
+    font-size: 30px;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px black;
+    font-weight: 200;
+}
+
+nav {
+    background: #3a1c17;
+    text-align: center;
+    height: 50px;
+    border-top: 1px #ac9676 solid;
+    border-bottom: 1px #ac9676 solid;
+}
+
+nav ul {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 50px;
+}
+
+nav > ul li {
+    line-height: 50px;
+    border-left: #ac9676 1px solid;
+    width: 15%;
+    position: relative;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px 0px;
+}
+
+nav ul li:hover a {
+    border-bottom: whitesmoke 2px solid;
+    padding: 5px 0px;
+}
+
+ul.sub-menu {
+    position: absolute;
+    left: 10px;
+    top: 48px;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    float: left;
+    transition: visibility 0s, opacity 1s;
+    z-index: 100;
+}
+
+nav ul li:hover ul.sub-menu{
+    visibility: visible;
+    opacity: 1;
+    
+}
+
+ul.sub-menu li {
+    margin: 0px;
+    width: 200px;
+}
+
+
+ul.sub-menu li a {
+    background: #825b4a;
+    display: block;
+    border: 1px solid black;
+}
+
+ul.sub-menu li:hover a {
+    border-bottom: none;
+    background-color: #523029;
+}
+
+nav ul li.search-tool div#search-box {
+    background: #E8E8E4;
+    position: absolute;
+    top: 60px;
+    right: 30%;
+    width: 1000px;
+    height: 70px;
+    padding-top: 4px;
+    box-shadow: 15px 10px 6px rgba(0, 0, 0, 0.8);
+    border-top: 4px solid #D80B15;
+    float: left;
+    z-index: 100;
+    visibility: hidden;
+    transition: visibility 0s, opacity 1s;
+}
+
+nav ul li.search-tool span.icon-search {
+    display: block;
+}
+
+
+nav ul li.search-tool div#search-box:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 34px;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 18px solid #D80B15;
+}
+
+nav ul li.search-tool div#search-box input[type="text"] {
+    width: 700px;
+    padding: 10px 14px 10px;
+    margin-left: 0px;
+    border: 1px solid #825b4a;
+    outline: none;
+}
+
+nav ul li.search-tool div#search-box input[type="button"]{
+    width: 80px;
+    padding: 10px 0;
+    background: #D80B15;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #D80B15;
+    border-radius: 7px;
+    outline: none;
+}
+
+nav ul li.search-tool div#search-box select {
+    width: fit-content;
+    padding: 6.5px 5px 9px;
+    background: #D80B15;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #D80B15;
+    border-radius: 7px;
+    outline: none;
+}
+
+nav ul li.search-tool div#search-box select option {
+    background: #ffead0;
+    color: black;
+}
+
+
+.main-banner img {
+    height: 500px;
+}
+
+
+
+footer span.footer-caption {
+    color: whitesmoke;
+    text-shadow: 4px 3px 2px black;
+    font-size: 32px;
+}
+
+footer div {
+    margin: 48px 0px;
+    width: 100%;
+    height: 100px;
+}
+
+footer div.quick-link ul li a {
+    display: block;
+    margin: 20px auto;
+    color: rgb(255,255,255,0.7);
+    font-size: 20px;
+    box-shadow: 0 0 0 rgba(0,0,0,0.3);
+}
+footer div.quick-link ul li a:hover {
+    color: whitesmoke;
+    font-weight: 800;
+    border-bottom: 1px solid whitesmoke;
+    letter-spacing: 2px;
+}
+
+footer {
+    /* background-image: url(../images/footer-bg.jpg); */
+    background-color: #000000;
+    background-image: linear-gradient(150deg, #000000 10%, #422419 90%);
+    width: 100%;
+    height: 430px;
+}
+
+footer .subscribe, .quick-link, .contact-info {
+    padding: 0 2em;
+
+}
+
+footer .subscribe p.subscribe-caption {
+    color: rgb(255,255,255,0.7);
+    font-size: 20px;
+    margin: 40px auto;
+}
+
+footer .subscribe .subscribe-form {
+    margin: 0;
+}
+
+footer .subscribe .subscribe-form #email-subscribe {
+    border: 1px solid whitesmoke;
+    width: 24em;
+    padding: 8px 10px;
+}
+
+footer .subscribe .subscribe-form #submit-email {
+    border: 0px solid whitesmoke;
+    width: 6em;
+    padding: 9px 10px;
+    background-color: #f89223;
+}
+
+.contact-info ul li a {
+    display: block;
+    margin: 20px auto;
+    color: rgb(255,255,255,0.7);
+    font-size: 18px;
+    box-shadow: 0 0 0 rgba(0,0,0,0.3);
+}
+
+.contact-info ul li a:hover 
+{
+    color: whitesmoke;
+    letter-spacing: 2px;
+}
+
+.contact-info ul li a .icon-contact {
+    font-size: 20px;
+    margin-right: 6px;
+}
+
+.recent-menu .container-fluid {
+    width: 100%;
+    text-align: center;
+    color: rgba(0,0,0,0.8);
+    margin-top: 100px;
+    padding: 0px 0px;
+}
+
+.category-container {
+  display: flex;
+  justify-content: center;
+}
+
+figure.category-card {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 35px;
+  width: 280px;
+  height: 280px;
+  border: 0.1px solid white;
+  border-radius: 50%;
+  background: #000000;
+  box-shadow: 5px 4px 5px #523029;
+  cursor: pointer;
+}
+
+figure.category-card * {
+  box-sizing: border-box;
+}
+
+figure.category-card > img {
+  opacity: 1;
+  width: 100%;
+  filter: blur(0px);
+  transition: all 0.35s;
+  transform: scale(1.05);
+}
+
+figure.category-card div.fig-caption {
+  left: 30px;
+  margin-bottom: -50px;
+  position: absolute;
+  right: 30px;
+  text-align: left;
+  bottom: 100%;
+  transition: bottom 0.35s;
+}
+
+figure.category-card div.fig-caption h2 {
+  width: 120%;
+  text-align: center;
+  border-radius: 0 0 5px 5px;
+  margin-left: -22px;
+  padding: 10px 20px;
+  font-size: 1em;
+  top: 40px;
+  bottom: 0;
+  font-weight: 300;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background-color: #000000;
+  position: relative;
+  z-index: 1;
+  word-spacing: 4px;
+}
+
+figure.category-card div.fig-caption h2 span {
+  font-weight: 800;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  
+}
+
+figure.category-card div.fig-caption p {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    border-radius: 1em;
+    font-size: 0.9em;
+    min-height: 220px;
+    top: 25px;
+
+}
+
+figure.category-card div.fig-caption p span {
+    padding: 6px 20px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    position: absolute;
+    bottom: 1px;
+}
+
+figure.category-card.blue div.fig-caption h2 {
+  background: #20638f;
+}
+
+figure.category-card.red div.fig-caption h2 {
+  background: #b1081b;
+}
+
+figure.category-card.yellow div.fig-caption h2 {
+  background: #cc7016;
+}
+
+figure.category-card.green div.fig-caption h2 {
+  background: #1e8449;
+}
+
+figure.category-card a {
+  opacity: 0.7;
+}
+
+figure.category-card a:hover {
+  opacity: 1;
+}
+figure.category-card:hover > img,
+figure.category-card.hover > img {
+  opacity: 0.5;
+  filter: blur(5px);
+
+  transform: scale(1.1);
+}
+figure.category-card:hover div.fig-caption,
+figure.category-card.hover div.fig-caption {
+  bottom: 115px;
+}
+
+
+.main-banner {
+    background-color: #a55c1b;
+    background-image: linear-gradient(360deg, #a55c1b 0%, #000000 40%);
+    padding-top: 40px;
+    height: 600px;
+}
+
+.main-banner > h2 {
+    color: whitesmoke;
+    font-family: 'Lobster', cursive;
+    font-size: 72px;
+    margin-left: 33%;
+}
+
+.card-banner {
+    width: 80%;
+    height: 500px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.card-banner img.left {
+    width: 640px;
+    height: 320px;
+    position: absolute;
+    box-shadow: 6px 6px 10px black;
+}
+
+.card-banner .date {
+    text-align: center;
+    padding: 20px 25px;
+    background: darkslategray;
+    position: absolute;
+    color: whitesmoke;
+    border: 1px solid black;
+    box-shadow: 2px 2px 4px black;
+}
+
+.card-banner .date .day {
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 34px;
+    text-shadow: 5px 1px 4px black;
+}
+
+.card-banner .date .month {
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    font-size: 26px;
+    text-shadow: 2px 1px 4px black;
+}
+
+.card-banner .card-caption {
+    width: 40%;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    color: whitesmoke;
+    text-shadow: 2px 1px 1px black;
+}
+
+.card-banner .card-caption h2 {
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+    font-size: 34px;
+    font-family: 'Acme', sans-serif;
+}
+
+.card-banner .card-caption p {
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+
+.card-banner .card-caption a {
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+.card-banner .card-caption a:hover {
+    border-bottom: 1px solid whitesmoke;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.owl-dots {
+    position: absolute;
+    bottom: 160px;
+    left: 50.5%;
+}
+
+.owl-prev  {
+    position: absolute;
+    bottom: 130px;
+    display: none;
+    left: 50%;
+}
+
+.owl-next  {
+    position: absolute;
+    bottom: 130px;
+    left: 55%;
+    display: none;
+}
+
+section.category {
+    margin: 90px auto;
+    text-align: center;
+}
+
+section.category > h3 {
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+section.category > h2 {
+    margin-bottom: 40px;
+    font-size: 50px;
+    font-family: 'Acme', sans-serif;
+    color: #3a1c17;
+    letter-spacing: 2px;
+}

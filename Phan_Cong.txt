@@ -1,4 +1,0 @@
-Linh + Ha : branch HomePage
-Phong + Phu : branch CongThucChiTiet
-Vinh : branch CongThucChung
- 

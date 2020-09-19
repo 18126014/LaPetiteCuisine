@@ -1,0 +1,25 @@
+<body>
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Recipes</li>
+    </ol>
+  </nav>
+  
+  <h2 id="category-name">All recipes</h2>
+
+  <ul class="category-list">
+    
+  </ul>
+
+  <div class="recipe-area">
+    <div class="row recipe">
+        <div class="recipe-area">
+    <div class="row recipe">
+        {{#each this.datas}}
+        {{> recipe_card this}}
+        {{/each}}
+    </div>
+    <button type="button" class="btn btn-secondary btn-lg btn-block more">View more</button>
+  </div>
+</body>

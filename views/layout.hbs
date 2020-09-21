@@ -21,7 +21,7 @@
                 <div class="col-md-7 search">
                     <div class="search-group" style="position: relative;">
                         <i class="fa fa-search" aria-hidden="true" style="color: #290001; font-size: 30px; margin-right: 10px; width: 5%;"></i>
-                        <input type="search" id="search" placeholder="Search here">
+                        <input type="search" id="search" placeholder="Type the ingredients. Ex: garlic, shrimp">
                         <i title="Upload an image of ingredients!" id="img-search" onclick="ShowUpImg()" class="fa fa-camera" aria-hidden="true" style="cursor: pointer; position: absolute; right: 5%; top: 25%; font-size: 28px"></i>
                         
                     </div>
@@ -33,7 +33,7 @@
                             <option value="name" title="Search by name">Name</option>
                         </select>
                         <div class="input-group-append">
-                            <button id="search-btn" class="btn btn-warning" type="button" onclick="javascript:alert('Hello')">Search</button>
+                            <button id="search-btn" class="btn btn-warning" type="button" onclick="SearchItem()">Search</button>
                         </div>
                     </div> 
                 </div>
@@ -156,9 +156,11 @@
     $("#find-type").change(()=>{
       if(document.getElementById("find-type").value === "name") {
         document.getElementById("img-search").style.visibility ="hidden";
+        document.getElementById("search").placeholder = "Type the name of dish. Ex: Grilled Shrimp";
       }
       else {
         document.getElementById("img-search").style.visibility = "visible";
+        document.getElementById("search").placeholder = "Type the ingredients. Ex: garlic, shrimp";
       }
     })
 
@@ -172,6 +174,15 @@
           document.getElementById("search-btn").click();
         }
       });
+
+      function SearchItem() {
+        var item = document.getElementById("search").value;
+        var type = document.getElementById("find-type").value;
+        if(type === "name") {
+          location.href = `/search-${item}`;
+        }
+        //alert("Searching...")
+      }
   </script>
 
 </body>

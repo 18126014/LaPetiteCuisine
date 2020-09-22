@@ -68,7 +68,6 @@ h2.page-title{
     font-size: 1.5rem;
 }
 
-
 .card-section .card .img-thum{
     height: 100%;
     width: 100%;
@@ -83,6 +82,7 @@ h2.page-title{
     border: none;
     margin-bottom: 40px;
     user-select: none;
+    cursor: pointer;
 }
 
 .card-section .card:hover {

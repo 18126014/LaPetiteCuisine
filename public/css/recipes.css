@@ -124,6 +124,7 @@ h2.page-title{
 
 .card-section .card .card-text .text-muted > span{
     margin-right: 20px;
+    font-size: 16px;
 }
 .card-section .card .card-text .text-muted i{
     margin-right: 5px;

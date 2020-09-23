@@ -14,7 +14,7 @@ var router = express.Router();
 router.get("/", (req, res) => res.send("Hell from user"));
 
 router.get("/sign-in", function (req, res, next) {
-  res.render("sign-in", { layout: false });
+  res.render("sign-in", { layout: false, js_file: "./../js/sign_in.js", css_file: "./../css/sign_in.css",});
 });
 
 router.post("/sign-in", async (req, res, next) => {

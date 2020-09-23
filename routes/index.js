@@ -119,7 +119,13 @@ router.get("/search-by-ingre-:keyword", async (req, res, next) => {
   catch(error) {
     next(createHttpError(error));
   }
-  
 });
+
+router.get("/contact", function(req, res) {
+  res.render("contact", {
+    title: "Contact - La Petite Cuisine",
+    js_file: "./../js/contact.js",
+    css_file: "./../css/contact.css"})
+})
 
 module.exports = router;

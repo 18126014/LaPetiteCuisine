@@ -71,7 +71,7 @@ router.post(
             res.redirect("/dashboard");
           })();
         } catch (error) {
-          next(createHttpError(err));
+          next(createHttpError(error));
         }
       })
       .catch((err) => {
@@ -123,9 +123,9 @@ router.post(
     // moi du lieu trong form (txt+img)
     // luu img vao storage => url
     // text + url ==> database
-    const { token } = req.cookies;
-    const decoded = jwt.decode(token);
-    const { username } = decoded;
+//    const { token } = req.cookies;
+//    const decoded = jwt.decode(token);
+//    const { username } = decoded;
 
     var data = JSON.parse(JSON.stringify(req.body));
     console.log("data", data);
@@ -176,6 +176,20 @@ router.post("/detail", async (req, res) => {
   const result = await recipesController.get(uri);
   res.status(200).json(result[0]);
 });
+
+// empty trash
+router.get('/rm-undo', async (req, res, next) => {
+  const { token } = req.cookies;
+  const decode = jwt.decode(token);
+  const { username } = decode;
+
+  try {
+    const result = await recipesController.removeUndo(username)
+    res.status(200).json(result)
+  } catch (error) {
+    next(createHttpError(error))
+  }
+})
 
 const toURI = (name) => {
   var string = name.toString();

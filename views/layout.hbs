@@ -19,7 +19,7 @@
     <div class="jumbotron">
       <div class="row">
         <div class="col-md-5 logo">
-          <img src="./images/logo.png" alt="" width="160px">
+          <img src="../images/logo.png" alt="" width="160px">
           <h1 onClick="location.href='/'">La Petite Cuisine</h1>
         </div>
         <div class="col-md-7 search">
@@ -86,9 +86,24 @@
           <li class="nav-item">
             <a class="nav-link" href="/contact">Contact</a>
           </li>
+          {{#if user.username}}
           <li class="nav-item">
-            <a class="nav-link" href="/users/sign-in"><i class="fa fa-user" aria-hidden="true"></i> Sign In </a>
+            <a class="nav-link" href="/dashboard"><i class="fa fa-user" aria-hidden="true"></i>Hello, {{user.fullname}}
+            </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/signout"><i class="fa fa-user" aria-hidden="true"></i> Sign out </a>
+          </li>
+          {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/users/sign-in"><i class="fa fa-user" aria-hidden="true"></i> Sign in </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/sign-as-guest"><i class="fa fa-user" aria-hidden="true"></i> Sign as guest
+            </a>
+          </li>
+          {{/if}}
+
         </ul>
       </div>
     </nav>

@@ -197,13 +197,13 @@
                                         <h3>Ingredients:</h3>
 
                                     </div>
-                                    <button type="button" id="add-ingre" class="btn btn-info">+</button>
+                                    <button type="button" id="add-ingre2" class="btn btn-info">+</button>
 
                                     <div class="form-group" id="direction-list2">
                                         <h3>Direction:</h3>
 
                                     </div>
-                                    <button type="button" id="add-direction" class="btn btn-info">+</button>
+                                    <button type="button" id="add-direction2" class="btn btn-info">+</button>
 
                                     <br>
                                     <div class="submit" style="text-align: right;">
@@ -295,12 +295,14 @@
         document.querySelector("#date").valueAsDate = new Date();
         bootstrapValidate("#description", "required: Description of dish must not be blank.");
         bootstrapValidate("#ingre-1", "required: Recipe must have at least 1 ingredient.");
+        
         var ingre_stt = 1;
         var direction_stt = 1;
 
         $("#add-ingre").click(function () {
             ingre_stt += 1;
             //<input type="text" class="form-control" name="ingre-1" id="ingre-1">
+            var add_ingre = document.createElement("div");
             var new_ingre = document.createElement("input");
             new_ingre.setAttribute("type", "text");
             new_ingre.setAttribute("class", "form-control");
@@ -318,15 +320,7 @@
             rm_icon.setAttribute("aria-hidden", "true");
             rm_ingre.appendChild(rm_icon);
 
-            rm_ingre.addEventListener('click', e => {
-                e.preventDefault()
-                alert(e.target.getAttribute('id'))
-
-                // TODO: remove by id
-            })
-
             document.getElementById("ingre-list").appendChild(new_ingre);
-            document.getElementById("ingre-list").appendChild(rm_ingre);
         });
 
         $("#add-direction").click(function () {
@@ -496,6 +490,44 @@
                     direct_list.appendChild(direct);
                     console.log("ingre: ", _data.direction[i]);
                 }
+
+                var ingre_stt = 1;
+                var direction_stt = 1;
+
+                $("#add-ingre2").click(function () {
+                ingre_stt += 1;
+
+                var new_ingre = document.createElement("input");
+                new_ingre.setAttribute("type", "text");
+                new_ingre.setAttribute("class", "form-control");
+                new_ingre.setAttribute("name", `ingredients`);
+                new_ingre.setAttribute("id", `ingre-${ingre_stt}`);
+                new_ingre.setAttribute("placeholder", `Add more...`)
+
+                var rm_ingre = document.createElement("button");
+                rm_ingre.setAttribute("class", "rm-ingre");
+                rm_ingre.setAttribute("id", `rm-${ingre_stt}`)
+
+                var rm_icon = document.createElement("i");
+                rm_icon.setAttribute("class", "fa fa-minus");
+                rm_icon.setAttribute("aria-hidden", "true");
+                rm_ingre.appendChild(rm_icon);
+
+                document.getElementById("ingre-list2").appendChild(new_ingre);
+            });
+
+            $("#add-direction2").click(function () {
+                direction_stt += 1;
+
+                var new_direction = document.createElement("input");
+                new_direction.setAttribute("type", "text");
+                new_direction.setAttribute("class", "form-control");
+                new_direction.setAttribute("name", `direction`);
+                new_direction.setAttribute("id", `direction-${direction_stt}`);
+                new_direction.setAttribute("placeholder", `Add more...`)
+                document.getElementById("direction-list2").appendChild(new_direction);
+        });
+
             },
             error: function (error) { alert(error) }
         });

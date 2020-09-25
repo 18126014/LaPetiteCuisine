@@ -134,9 +134,9 @@ router.post(
     // moi du lieu trong form (txt+img)
     // luu img vao storage => url
     // text + url ==> database
-    //    const { token } = req.cookies;
-    //    const decoded = jwt.decode(token);
-    //    const { username } = decoded;
+        const { token } = req.cookies;
+        const decoded = jwt.decode(token);
+        const { username } = decoded;
 
     var data = JSON.parse(JSON.stringify(req.body));
     console.log("data", data);
@@ -144,6 +144,15 @@ router.post(
     const { name } = data;
     const uri = toURI(name);
 
+
+    var { ingredients } = data;
+    var { direction } = data;
+    console.log("ingredients", ingredients);
+    const removeItem = "";
+    filter_ingredients = ingredients.filter((item) => item != removeItem);
+    console.log("filter_ingredients", filter_ingredients);
+    filter_direction = direction.filter((item) => item != removeItem);
+    
     const { file } = req;
     if (file) {
       UploadImageToStorage(file)
@@ -152,10 +161,14 @@ router.post(
 
           data = {
             ...data,
+            ingredients: filter_ingredients,
+            direction: filter_direction,
             uri,
             img: success,
+            author: username,
+            deleteDate: ""
           };
-          console.log("data", data);
+          console.log("data for update", data);
 
           try {
             (async () => {
@@ -172,7 +185,7 @@ router.post(
         });
     } else {
       try {
-        await recipesController.update({ uri: uri }, { ...data });
+        await recipesController.update({ uri: uri }, { ...data, ingredients: filter_ingredients, direction: filter_direction, author: username, deleteDate: ""});
         res.redirect("/dashboard");
       } catch (error) {
         next(createHttpError(error));

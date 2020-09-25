@@ -240,7 +240,7 @@ router.post("/search", localUpload.single("input-b1"), async (req, res) => {
       console.log(error);
     });
 
-  res.redirect(`/search-by-img-${labels}`);
+  res.redirect(`/search-by-ingre-${labels}`);
 
   // console.log('result', labels)
   // const result = await recipesController.searchByIngredients(labels)

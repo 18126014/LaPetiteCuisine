@@ -12,7 +12,7 @@
         {{#each latest}}
 
         <div class="carousel-item {{#if @first}}active{{/if}}">
-          <a href="#"><img src="{{this.img}}" class="d-block w-100" alt="..."></a>
+          <a href="/recipes/{{this.uri}}"><img src="{{this.img}}" class="d-block w-100" alt="..."></a>
           <div class="carousel-caption d-none d-md-block">
             <h5>{{this.name}}</h5>
             <p>{{this.description}}</p>
